@@ -18,7 +18,7 @@
     --primary-font:'Open Sans', sans-serif;
     --primary-font__bold: 700;
     --primary-font__semibold: 600;  
-    --body-colour: #000; 
+    --body-colour: var(--black); 
 }
 
 * {
