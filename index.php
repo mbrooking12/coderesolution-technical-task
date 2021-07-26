@@ -1,4 +1,4 @@
-<?php $cakes = include '../api/fetch-data.php'; ?>
+<?php $cakes = include 'api/fetch-data.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
