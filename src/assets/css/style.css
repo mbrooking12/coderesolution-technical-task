@@ -1,0 +1,231 @@
+:root {
+    --black: #1E2840;
+    --white: #fff;
+    --yellow001: #f8c619;
+    --blue001: #EFF9FF;
+    --blue002: #CDEAFB;
+    --blue003: #0699E7;
+    --blue004: #57c0fd;
+    --orange001: #FFE7D8;
+    --orange002: #C47562;
+    --grey001: #ACACAC;
+    --grey002: #717171;
+    --grey003: #D9D9D9;
+
+
+    --border-colour: var(--grey003);
+
+    --primary-font:'Open Sans', sans-serif;
+    --primary-font__bold: 700;
+    --primary-font__semibold: 600;  
+    --body-colour: #000; 
+}
+
+* {
+    box-sizing:border-box;
+}
+
+html {
+    font-family:var(--primary-font);
+    font-weight:var(--primary-font__semibold);
+    font-size:100%;
+    font-weight:var(--primary-font__semibold);
+    height:100%;
+}
+body {
+    font-size:.9375rem;
+    margin:0;
+    color:var(--body-colour);
+}
+
+.btn {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:7.25rem;
+    height:2.5rem;
+    border-radius:.5rem;
+    font-size:.75rem;
+    text-transform:uppercase;
+    text-decoration:none;
+}
+.btn:not(.btn--disabled) {
+    background:var(--blue002);
+    color:var(--blue003);
+    transition:background-color .4s ease-in-out;
+}
+.btn:not(.btn--disabled) svg {
+    margin-left:.5625rem;
+}
+.btn:not(.btn--disabled) svg path {
+    transition:d .4s ease-in-out;
+}
+.btn:not(.btn--disabled):hover {
+    background:var(--blue004);
+}
+.btn:not(.btn--disabled):hover svg path {
+    d: path("M 21 4 L 17 0 V 3 H 7 V 5 H 17 V 8 L 21 4 Z");
+}
+.btn.btn--disabled {
+    background:var(--orange001);
+    color:var(--orange002);
+    cursor:not-allowed;
+}
+.btn.btn--disabled svg {
+    display:none;
+}
+
+h1, h2 {
+    color:var(--body-colour);
+}
+.flex {
+    display:flex;
+}
+.flex-wrap {
+    flex-wrap:wrap;
+}
+.justify-between {
+    justify-content:space-between;
+}
+.justify-center {
+    justify-content:center;
+}
+.align-center {
+    align-items:center;
+}
+
+.sidebar {
+    background:var(--blue001);
+    width:6.875rem;
+    height:100vh;
+    padding:2.1875rem 0;
+}
+
+.main-content {
+    width:calc(100% - 6.875rem);
+    padding:4.5rem 7.8125rem;
+}
+
+@media (max-width:991px) {
+    .main-content {
+        padding-left:calc(7.8125rem / 2);
+        padding-right:calc(7.8125rem / 2);
+    }
+}
+@media (max-width:767px) {
+    .sidebar {
+        width:100%;
+        height:auto;
+    }
+    .main-content {
+        width:100%;
+        padding-left:1.25rem;
+        padding-right:1.25rem;
+    }
+}
+@media (max-width:451px) {
+    .main-content__head {
+        justify-content:center;
+    }
+    .main-content__head .page-title {
+        margin-bottom:1.5rem;
+    }
+}
+.main-content__head {
+    margin-bottom:3.125rem;
+}
+
+.page-title {
+    font-size:1.625rem;
+    font-weight:var(--primary-font__semibold);
+    margin:0;
+}
+.page-title__yellow {
+    color:var(--yellow001);
+}
+
+.sort__label {
+    color:var(--grey001);
+    font-size:.8125rem;
+    margin-right:1.25rem;
+}
+select {
+    border:.0625rem solid var(--border-colour);
+    border-radius:.3125rem;
+    appearance: none;
+    display:flex;
+    align-items:center;
+    background:url(../img/triangle.svg) no-repeat right .875rem center #fff;
+    width:8.5625rem;
+    height:2.5rem;
+    padding:0 1.4375rem;
+    font-size:.75rem;
+    color:var(--grey002);
+    text-transform:uppercase;
+    transition:border-color .4s ease-in-out;
+}
+select:focus {
+    outline:none;
+    border-color:var(--black);
+}
+.table-head {
+    margin-bottom:1.375rem;
+}
+@media (max-width:767px) {
+    .table-head {
+        display:none;
+    }
+}
+.table-head__label {
+    width:50%;
+    text-transform:uppercase;
+    font-size:.6875rem;
+    letter-spacing:.355em;
+    color:var(--grey001);
+}
+
+.card {
+    background:var(--white);
+    border-radius:.5rem;
+    box-shadow:0 0.4375rem 1.5rem rgb(0 0 0 / 5%);
+    padding:1.25rem 1.875rem;
+    margin-bottom:.9375rem;
+}
+
+.card--disabled {
+    opacity:.5;
+}
+
+.card__half {
+    width:50%;
+}
+@media (max-width:767px) {
+    .card__half {
+        width:100%;
+        margin-bottom:1.875rem;
+        justify-content:space-between;
+    }
+    .card__half:last-child {
+        margin:0;
+    }
+}
+
+.card img {
+    margin-right:1.5625rem;
+}
+.card__head {
+}
+
+.card__title {
+    font-size:1.25rem;
+    font-weight:var(--primary-font__bold);
+    margin: 0 0 .5rem;
+}
+
+.card__detail {
+    font-size:.8125rem;
+    color:var(--grey001);
+}
+.card__price {
+    font-weight:var(--primary-font__bold);
+}
